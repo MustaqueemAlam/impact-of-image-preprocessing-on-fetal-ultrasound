@@ -1,7 +1,5 @@
 # 🩺 Evaluating the Impact of Image Preprocessing on Deep Learning-Based Fetal Ultrasound Classification under Class Imbalance
 
-Official implementation of our conference paper.
-
 ---
 
 ## 📖 Overview
