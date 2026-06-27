@@ -4,7 +4,7 @@
 
 ## 📖 Overview
 
-This repository contains the Google Colab notebooks used to evaluate the impact of different image preprocessing techniques on deep learning-based fetal ultrasound classification using **ResNet-50**.
+This repository contains the official implementation of our research on evaluating the impact of image preprocessing techniques for deep learning-based fetal ultrasound image classification using **ResNet-50**.
 
 Three preprocessing pipelines were investigated under identical experimental settings:
 
@@ -12,25 +12,41 @@ Three preprocessing pipelines were investigated under identical experimental set
 - Prewitt Filter + Zero Padding
 - Gamma Correction + Zero Padding
 
-The experiments were implemented using **TensorFlow/Keras** and executed on **Google Colab GPU**.
+The experiments were implemented using **TensorFlow/Keras** and executed on **Google Colab GPU**. The complete implementation is provided through three Jupyter notebooks.
+
+---
+
+## 📄 Research Paper
+
+**Title**
+
+> *Evaluating the Impact of Image Preprocessing on Deep Learning-Based Fetal Ultrasound Classification under Class Imbalance*
+
+**Conference**
+
+**ICICDS 2026** (International Conference on Intelligent Computing, Information and Communication Systems)
+
+**Publication Status**
+
+Presented at **ICICDS 2026**.
+
+The paper has been accepted for publication in the **ICICDS 2026 Conference Proceedings** and will be published soon.
 
 ---
 
 ## 📂 Repository Structure
 
-```
+```text
 .
 ├── Baseline_Preprocessing.ipynb
 ├── Prewitt_Filter_Preprocessing.ipynb
 ├── Gamma_Correction_Preprocessing.ipynb
 ├── README.md
-├── requirements.txt
-└── LICENSE
 ```
 
 ---
 
-# 📓 Notebooks
+## 📓 Notebooks
 
 | Notebook | Description |
 |-----------|-------------|
@@ -52,7 +68,7 @@ Each notebook contains:
 
 ---
 
-# 💻 Development Environment
+## 💻 Development Environment
 
 The experiments were conducted using:
 
@@ -65,35 +81,37 @@ The experiments were conducted using:
 - Matplotlib
 - Scikit-learn
 
-GPU Used:
+**GPU Used**
 
 - NVIDIA Tesla T4 (Google Colab)
 
 ---
 
-# 📂 Dataset
+## 📂 Dataset
 
 The experiments utilize the **Ultrasound Fetus Dataset**.
 
-Classes:
+**Classes**
 
 - Normal
 - Benign
 - Malignant
 
-Total Images:
+**Total Images**
 
-- 1669
+- 1,669
 
 The dataset is **not included** in this repository due to licensing restrictions.
 
 Please download it from its official source and update the dataset path inside each notebook.
 
-Dataset link: https://www.kaggle.com/datasets/orvile/ultrasound-fetus-dataset
+**Dataset**
+
+https://www.kaggle.com/datasets/orvile/ultrasound-fetus-dataset
 
 ---
 
-# 🚀 Running the Notebooks
+## 🚀 Running the Notebooks
 
 1. Clone the repository
 
@@ -115,33 +133,23 @@ git clone https://github.com/MustaqueemAlam/impact-of-image-preprocessing-on-fet
 
 ---
 
-# 📊 Experimental Pipelines
+## 📊 Experimental Pipelines
 
-### Notebook 1
-
-Baseline
+### Baseline
 
 - Resize
 - Zero Padding
 - Transfer Learning
 - Fine-tuning
 
----
-
-### Notebook 2
-
-Prewitt Filter
+### Prewitt Filter
 
 - Edge Detection
 - Zero Padding
 - Transfer Learning
 - Fine-tuning
 
----
-
-### Notebook 3
-
-Gamma Correction
+### Gamma Correction
 
 - Gamma Enhancement
 - Zero Padding
@@ -150,24 +158,24 @@ Gamma Correction
 
 ---
 
-# 📈 Main Results
+## 📈 Main Results
 
 | Pipeline | Accuracy | Macro F1 |
 |-----------|---------:|----------:|
 | Baseline | 0.63 | 0.44 |
-| Prewitt | **0.64** | 0.45 |
+| **Prewitt Filter** | **0.64** | 0.45 |
 | Gamma Correction | 0.63 | **0.46** |
 
-The results indicate that image preprocessing may provide marginal improvements, while dataset imbalance remains the dominant challenge.
+The results indicate that image preprocessing provides only marginal performance improvements, while severe class imbalance remains the primary factor limiting classification performance.
 
 ---
 
-# 📄 License
+## 📄 License
 
-This repository is released under the MIT License.
+This project is released under the **MIT License**.
 
 ---
 
-# ⚠️ Disclaimer
+## ⚠️ Disclaimer
 
 This repository is intended solely for academic research and educational purposes. It is **not intended for clinical diagnosis or medical decision-making.**
